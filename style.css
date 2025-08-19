@@ -11,10 +11,11 @@ navbar,
 footer {
   background-color: #292e33;
   color: white;
+  z-index: 5;
 }
 navbar {
   margin: 0;
-  padding: 20px;
+  padding: 0px;
   top: 0;
   position: sticky;
 }
@@ -26,16 +27,10 @@ footer {
   bottom: 0;
   position: fixed;
 }
-div {
+div,
+section {
   margin: 0;
   padding: 0;
-}
-section {
-  margin: 10px;
-  padding: 20px 10px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px black;
 }
 /* text */
 a {
@@ -52,9 +47,32 @@ p,
 img {
   margin-block: 10px;
 }
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 3rem;
+}
+h5 {
+  font-size: 3rem;
+}
+h6 {
+  font-size: 3rem;
+}
+p,
+a {
+  font-size: 1.25rem;
+}
 /* class */
 .dark,
-.light {
+.light,
+.bg {
   padding: 30px 10px;
 }
 .dark {
@@ -62,6 +80,24 @@ img {
 }
 .light {
   background-color: white;
+}
+.bg {
+  position: relative;
+  background-image: url("img/projects/draw_0078_revisi_colored.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 .round {
   border-radius: 50%;
@@ -85,14 +121,29 @@ img {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
-.col {
+.col-2 {
   flex: 0 0 auto;
   width: 41.66666667%;
 }
-.button {
+.div-card {
+  margin: 10px;
+  padding: 20px 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px black;
+}
+.a-button {
   padding: 10px;
   display: inline-block;
   background-color: rgb(81, 136, 240);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.a-button:hover {
+  padding: 10px;
+  display: inline-block;
+  background-color: rgb(54, 91, 158);
   color: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -108,11 +159,39 @@ footer div {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-navbar div a {
+navbar a {
   display: block;
-  margin-inline: 10px;
+  padding: 20px;
   color: white;
 }
-footer div a {
+navbar a:hover {
+  color: rgb(145, 145, 145);
+}
+navbar a.active {
+  color: #292e33;
+  background-color: white;
+}
+footer a {
   color: white;
+}
+footer a:hover {
+  color: rgb(145, 145, 145);
+}
+#contact {
+  padding-bottom: 120px;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+.bg h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+* {
+  position: relative;
+  z-index: 3;
 }
