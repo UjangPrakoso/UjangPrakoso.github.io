@@ -69,10 +69,17 @@ p,
 a {
   font-size: 1.25rem;
 }
+svg {
+  margin-inline: 1.25rem;
+  padding: 0;
+  width: 2.5rem;
+}
 /* class */
 .dark,
 .light,
-.bg {
+.bg,
+.bg2,
+.bg3 {
   padding: 30px 10px;
 }
 .dark {
@@ -81,15 +88,27 @@ a {
 .light {
   background-color: white;
 }
-.bg {
+.bg,
+.bg2,
+.bg3 {
   position: relative;
-  background-image: url("img/projects/draw_0078_revisi_colored.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
-.bg::before {
+.bg {
+  background-image: url("img/projects/draw_0078_revisi_colored.jpg");
+}
+.bg2 {
+  background-image: url("img/projects/draw_0107_colored.jpg");
+}
+.bg3 {
+  background-image: url("img/projects/draw_0138_colored.jpg");
+}
+.bg::before,
+.bg2::before,
+.bg3::before {
   content: "";
   position: absolute;
   top: 0;
@@ -182,6 +201,12 @@ footer a:hover {
 }
 #contact a:hover {
   text-decoration: underline;
+}
+#contact div {
+  margin-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .bg h1,
 h2,
