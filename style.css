@@ -73,6 +73,13 @@ svg {
   margin: 0;
   padding: 0;
 }
+iframe {
+  width: 400;
+  height: 200;
+}
+table {
+  margin-inline: auto;
+}
 /* class */
 .dark,
 .light,
@@ -189,7 +196,7 @@ footer div {
 }
 navbar a {
   display: block;
-  padding: 20px 20px 20px 0;
+  padding: 20px 10px 20px 10px;
 }
 navbar a p {
   padding-top: 5px;
@@ -198,8 +205,8 @@ navbar a:hover {
   color: rgb(145, 145, 145);
 }
 navbar a.active {
-  color: #292e33;
-  background-color: white;
+  color: white;
+  background-color: #00471b;
 }
 footer a:hover {
   color: rgb(145, 145, 145);
